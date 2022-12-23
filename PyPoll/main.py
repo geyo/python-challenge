@@ -30,9 +30,11 @@ with open(csvpath) as csvfile:
         #otherwise, add them to dictionary, and add 1 to their vote
         else: 
            candidates_dict.update({row[-1]: 1})
-           candidate_list.append(row[2])
+           #candidate_list.append(row[2])
 
-    #assign candidates to variables
+    #assign and dictionary to list, and find % of votes
+    candidate_list = list(candidates_dict.keys())
+    
     can_1 = candidate_list[0]
     can_1_count = candidates_dict[can_1]
     can_1_per = round((can_1_count / total_votes) * 100, 3)
@@ -45,14 +47,24 @@ with open(csvpath) as csvfile:
     can_3_count = candidates_dict[can_3]
     can_3_per = round((can_3_count / total_votes) * 100, 3)
 
-# print
-print("Election Results")
-print("-"*30)
-print(f'Total Votes: {total_votes}')
-print("-"*30)
-print(f' {can_1}: {can_1_per}% ({can_1_count})')
-print(f' {can_2}: {can_2_per}% ({can_2_count})')
-print(f' {can_3}: {can_3_per} ({can_3_count})')
-print("-"*30)
-#print(f'Winner: {winner}')
-print("-"*30)
+    #find winner by using a max value applied to a dictionary
+    winner = max(candidates_dict, key=candidates_dict.get)
+
+# print message
+msg = f"""
+Election Results
+------------------------------
+Total Votes: {total_votes}
+------------------------------
+{can_1}: {can_1_per}% ({can_1_count})
+{can_2}: {can_2_per}% ({can_2_count})
+{can_3}: {can_3_per}% ({can_3_count})
+------------------------------
+Winner: {winner}
+------------------------------
+"""
+print(msg)
+
+#export results to terminal
+f = open("Analysis/results.txt","w")
+f.write(msg)

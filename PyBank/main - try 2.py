@@ -70,11 +70,17 @@ with open(csvpath) as csvfile:
 average = total_monthly_changes / (total_months - 1)
 
 # print 
-print(f'Financial Analysis')
-print("-"*30)
-print(f'Total Months: {total_months}')
-print(f'Total: ${total_net}')
-print(f'Average Change: ${round(average, 2)}')
-print(f'Greatest Increase in Profits: {most_increase_date} (${most_increase})')
-print(f'Greatest Decrease in Profits:  {most_decrease_date} (${most_decrease})')
+msg = f"""
+Financial Analysis
+-----------------------------------
+Total Months: {total_months}
+Total: ${total_net}
+Average Change: ${round(average, 2)}
+Greatest Increase in Profits: {most_increase_date} (${most_increase})
+Greatest Decrease in Profits:  {most_decrease_date} (${most_decrease})
+"""
+print(msg)
 
+#export results to terminal
+f = open("Analysis/results.txt","w")
+f.write(msg)
