@@ -12,7 +12,7 @@ Additionally, the final monthly changes are iterated.
 
 The final average change is found by dividing the aggregated total monthly changes by the the total months (minus 1, to account for len). 
 
-Finally, the file is prtined to terminal. 
+Finally, the file is printed to the terminal, and a new file with the message is added to the analysis folder. 
 
 ##PyPoll
 
