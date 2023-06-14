@@ -1,5 +1,7 @@
 # python-challenge
 
+![Benjamin Franklin](https://github.com/geyo/python-challenge/blob/main/python-challenge/Images/revenue-per-lead.png)
+
 ## PyBank
 
 To gather all the data, I created a for loop that iterates the total months and profit/loss net totals, and created two seperate lists to track months and profits. 
