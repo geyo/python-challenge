@@ -1,6 +1,6 @@
 # python-challenge
 
-##PyBank
+## PyBank
 
 To gather all the data, I created a for loop that iterates the total months and profit/loss net totals, and created two seperate lists to track months and profits. 
 
@@ -14,7 +14,7 @@ The final average change is found by dividing the aggregated total monthly chang
 
 Finally, the file is printed to the terminal, and a new file with the message is added to the analysis folder. 
 
-##PyPoll
+## PyPoll
 
 First, a path to open the csv is created. 
 
