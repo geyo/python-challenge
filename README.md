@@ -4,15 +4,13 @@
 
 ## PyBank
 
-To gather all the data, I created a for loop that iterates the total months and profit/loss net totals, and created two seperate lists to track months and profits. 
+To gather all data, a for loop that iterates through the total months and profit/loss net totals. I created two seperate lists to track months and profits. 
 
-These lists were used to figure out the change in profits from month to month. 
+These lists were used to determine the change in profits from month to month. 
 
-While the for loop is iterating, an if statement will check if the value in the row is greater than largest value found. Another if statement is checking for the lowest value. 
+An if statement will check if the value in the row is greater than largest value found. Another if statement will check for the lowest value. Additionally, the final monthly changes are iterated. 
 
-Additionally, the final monthly changes are iterated. 
-
-The final average change is found by dividing the aggregated total monthly changes by the the total months (minus 1, to account for len). 
+The final average change is found by dividing the aggregated total monthly changes by the the total months.
 
 Finally, the file is printed to the terminal, and a new file with the message is added to the analysis folder. 
 
